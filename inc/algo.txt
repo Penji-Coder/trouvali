@@ -1,0 +1,126 @@
+// Algo affichage Heroes page d'accueil
+Si homme -> code à changer titre - image - couleur
+Si femme -> code à changer titre - image - couleur
+Si LGBT -> code à changer titre - image - couleur
+Si Non-Binaire -> code à changer titre - image - couleur
+Si Alien -> code à changer titre - image - couleur
+Si Metamorphe -> code à changer titre - image - couleur
+Si Symbiote -> code à changer titre - image - couleur
+Si Jérémie -> code à changer titre - image - couleur
+Si Autre -> code à changer titre - image - couleur
+
+
+$isValid = ($age >= 18 ) ? 'tu es majeur' : 'tu es mineur' ;
+
+foreach (user as key)
+
+// Tableau numérique
+
+// Début fonction
+// Somme des notes 
+// obtenir nombre de notes
+// Moyenne = somme des notes / Nombre des notes
+
+//echo 'La moyenne est de ' Moyenne '.'
+//Fin fonction
+
+//Appel fonction
+
+<?php
+
+function faireMoyenne("tableau de notes fournis par utilisateur"){
+  $somme = faire la somme des notes;
+  $num_notes = obtenir nombre de notes;
+  $moyenne = $somme / $num_notes;
+  $arrondi = round($moyenne, 2)
+
+  echo 'la moyenne est de ' . $arrondi;
+}
+
+
+<?php
+if ($distrib == A1) {
+    echo "distrib égal 0";
+} elseif ($distrib == A2) {
+    echo "distrib égal A2";
+} elseif ($distrib == A3) {
+    echo "distrib égal A3";
+}
+
+
+
+<?php
+
+$numMantra = 5;
+$numError =
+$increment = 5;
+$yanoob = true;
+
+  if (yanoob) {
+    echo "Alors Yannick récite " . ++$increment
+
+  }else {
+    echo "Genre ou sar fioner ";
+  }
+
+?>
+
+
+// 1 => SI j'ai à partir de 18 ans et plus, et 10 Euros, je peut regarder MATRIX RESURRECTIONS ET RESIDENT EVIL.
+// 2 => SI j'ai à partir de 18 ans et plus, et plus de 19 Euros, je peut regarder MATRIX RESURRECTIONS ET RESIDENT EVIL, avec un coca et un Kitkat ball.
+// 3 => SI j'ai moins de 18 ans et 10 Euros je peut regarder TOUS EN SCENE 2, ENCANTO, MONSTER FAMILY.
+// 4 => SI j'ai moins de 18 ans et plus de 19 Euros je peut regarder TOUS EN SCENE 2, ENCANTO, MONSTER FAMILY avec un coca et un Kitkat ball.
+// 5 => SI j'ai à partir de 18 ans et plus, et moins de 10 Euros, il te manque quelques euros.
+// 6 => SI j'ai moins de 18 ans et moins de 10 Euros, il faudra demander à tes parents quelques euros.
+
+si age >= 18 && 
+
+1 => Si j'ai 18ans et plus et 10€
+    //je peux regarder 2 film
+2 => Si j'ai 18ans et plus  et plus que 19€
+    //je peux regarder 2 film et manger/boire
+3 => Si j'ai un age < 18ans et 10€
+    //je peux regarder 3 dessin anime
+4 => Si j'ai 18ans et plus que 19€
+    //je peux regarder 3 dessin anime et manger/boire
+5 => Si j'ai un age >= 18ans et euro < 10€
+    //j'ai pas assez d'argent
+6 => Si j'ai un age < 18ans et euro < 10€
+    //je peux demander à papa/maman
+
+
+ <?php
+
+$age_cine = 18;
+$euro = 20;
+
+
+if ($age_cine >= 18 ){ //supérieur ou égale 18
+  if($euro === 10 ){
+  echo 'Je peux regarder Matrix et Resident Evil';
+}
+  if ($euro > 19){
+  echo 'Je peux regarder Matrix et Resident Evil et manger un kitkat et boire un coca';
+  }if ( $euro < 10){
+        echo 'il te manque quelques euros donc allez travail pou gagné';
+        }
+    }
+
+elseif ($age_cine < 18 ){
+  if ($euro >= 10) {
+    echo 'Je peux regarder Tous en scène 2, Encanto et Monster Family';
+  }
+
+  if ($euro >= 19){
+    echo 'Je peux regarder Tous en scène 2, Encanto et Monster Family et manger boire';
+    }
+  }
+
+else {
+  echo 'Papa et Maman lé là ?';
+}
+
+echo '<p> </p>';
+
+
+?>
