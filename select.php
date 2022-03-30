@@ -54,7 +54,7 @@ $birth_date = $_POST["birth_date"];
 $genre =  $_POST["genre"];
 $region =  $_POST["region"];
 $mail =  $_POST["mail"];
-$chemin = "assets/image/" ;
+$chemin = "assets/img/" ;
 $photo= $chemin . $_FILES['file']['name'];
 $mdp = $_POST["mdp"];
  
