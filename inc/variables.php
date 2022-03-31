@@ -23,12 +23,12 @@ if(isset($_GET['limit']) && is_numeric($_GET['limit'])) {
 // Si le cookie est présent
 if (isset($_COOKIE['LOGGED_USER'])) {
     $loggedprofil = [
-        'email' => $_COOKIE['LOGGED_USER'],
+        'mail' => $_COOKIE['LOGGED_USER'],
     ];
 } 
 if (isset($_SESSION['LOGGED_USER'])) {
     $loggedprofil = [
-        'email' => $_SESSION['LOGGED_USER'],
+        'mail' => $_SESSION['LOGGED_USER'],
     ];
 }
 

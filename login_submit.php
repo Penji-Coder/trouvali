@@ -16,7 +16,7 @@ if (isset($_POST['mail']) &&  isset($_POST['mdp'])) {
 
 
 
-        ]
+ 
 
 
 
@@ -31,6 +31,6 @@ if (isset($_POST['mail']) &&  isset($_POST['mdp'])) {
 }
 
 
-
+header('location: home.php');
 
 ?>

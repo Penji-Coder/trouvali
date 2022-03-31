@@ -56,13 +56,15 @@
     </nav>
   </header>
 
-  <?php  foreach ( $profils as $profil) :  ?> 
-      <div class="album py-5 bg-light">
+  <div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+  <?php  foreach ( $profils as $profil) :  ?> 
+
         <div class="col">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm ">
             <img src=" <?php echo $profil['photo'] ?> "  class="card-img-top" alt="..." >
 
             <div class="card-body">
@@ -72,14 +74,20 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
+                <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
-        </div>
-          </div>
-        </div>
+ 
+
 <?php endforeach?> 
+
+      </div>
+    </div>
+  </div>
+
+
 
 
 

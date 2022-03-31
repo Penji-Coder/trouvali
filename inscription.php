@@ -42,10 +42,10 @@
               <li><a href="recherche.php" class="nav-link px-2 text-white">RECHERCHE</a></li>
               </li>
               <li>
-              <button class="w-100 btn btn-lg btn-primary" action="inscription.php" type="submit" >Inscription</button>
+              <a href="inscription.php">inscription</a>
               </li>
               <li>
-              <button class="w-100 btn btn-lg btn-primary" action="home.php" type="submit" >Connexion</button>
+              <a href="login.php">Connexion</a>
               </li>
             </ul>
           </div>

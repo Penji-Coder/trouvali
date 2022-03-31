@@ -24,3 +24,4 @@
         Bonjour <?php echo($loggedUser['mail']); ?> !
     </div>
 <?php endif; ?>
+
