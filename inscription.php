@@ -1,5 +1,3 @@
-<?php session_start();  
-  ?>
 <?php include 'db_connect.php'; ?>
 <?php include 'inc/variables.php'; ?>
 <!DOCTYPE html>
@@ -44,10 +42,10 @@
               <li><a href="recherche.php" class="nav-link px-2 text-white">RECHERCHE</a></li>
               </li>
               <li>
-              <a href="inscription.php">inscription</a>
+              <button class="w-100 btn btn-lg btn-primary" action="inscription.php" type="submit" >Inscription</button>
               </li>
               <li>
-              <a href="login.php">Connexion</a>
+              <button class="w-100 btn btn-lg btn-primary" action="home.php" type="submit" >Connexion</button>
               </li>
             </ul>
           </div>
@@ -55,37 +53,90 @@
       </div>
     </nav>
   </header>
+  
+  <!-- section formulaire film  -->
+  
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-black">
 
-  <?php  foreach ( $profils as $profil) :  ?> 
-      <div class="album py-5 bg-light">
-    <div class="container">
+        <div class="px-5 ms-xl-4">
+          <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+          <span class="h1 fw-bold mb-0">Logo</span>
+        </div>
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src=" <?php echo $profil['photo'] ?> "  class="card-img-top" alt="..." >
+        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-            <div class="card-body">
-              <p class="card-text"><h5 class="card-title"> <?php echo $profil['nom'] . " " .  $profil['prenom']  ?>    </h5></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-              </div>
+          <form style="width: 23rem;" action="select.php " method="post" enctype="multipart/form-data">
+
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">trouvali</h3>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="nom" name="nom" class="form-control form-control-lg" />
+              <label class="form-label" for="form2Example18"> Nom </label>
             </div>
-          </div>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="prenom" name="prenom" class="form-control form-control-lg" />
+              <label class="form-label" for="form2Example18"> Prénom </label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="date" id="birth_date" name="birth_date" class="form-control form-control-lg" />
+              <label class="form-label" for="form2Example28"> date de naissance  </label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="genre" name="genre" class="form-control form-control-lg" />
+              <label class="form-label" for="form2Example28"> genre  </label>
+            </div>
+
+             
+            <div class="form-outline mb-4">
+               <label class="form-label" for="form2Example28"> Région   </label>
+               <input type="text" id="region" name="region" class="form-control form-control-lg" />
+             
+            </div>
+
+            <div class="form-outline mb-4">
+               <label class="form-label" for="form2Example28"> Mail   </label>
+               <input type="mail" id="mail" name="mail" class="form-control form-control-lg" />
+             
+            </div>
+
+            <div class="form-outline mb-4">
+               <label class="form-label" for="form2Example28"> MDP   </label>
+               <input type="password" id="mdp" name="mdp" class="form-control form-control-lg" />
+             
+            </div>
+             
+            <!---------------------------------------------------- photo de profil --------------------------------------------------->
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">photo de profil</label>
+              <input class="form-control" type="file"  name="file" id="file" multiple>
+            </div>
+
+
+
+
+            <div class="pt-1 mb-4">
+            
+            <button action="home.php" type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+
+           
+          </form>
+
         </div>
-        </div>
-          </div>
-        </div>
-<?php endforeach?> 
 
-
-
-<!----------------------- Separation test 1 ---------------->
-
-
+      </div>
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="https://i.pinimg.com/originals/f6/ac/df/f6acdf8ac40c6a19f6fa1d358919ebda.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

@@ -1,4 +1,5 @@
 <?php include 'db_connect.php'; ?>
+<?php include 'inc/variables.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -39,6 +40,12 @@
               </li>
               <li class="nav-item">
               <li><a href="recherche.php" class="nav-link px-2 text-white">RECHERCHE</a></li>
+              </li>
+              <li>
+              <button class="w-100 btn btn-lg btn-primary" action="inscription.php" type="submit" >Inscription</button>
+              </li>
+              <li>
+              <button class="w-100 btn btn-lg btn-primary" action="home.php" type="submit" >Connexion</button>
               </li>
             </ul>
           </div>
@@ -100,6 +107,45 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] == 0)
                    'mail' => $mail ,
                    'mdp' => $mdp ,
                      ]);
+
+                  // Gestion de l'age 1 -----------------------------------------
+                  // $aujourdhui = date("Y-m-d");
+                  // $diff = date_diff(date_create($birth_date), date_create($aujourdhui));
+                  // echo 'Votre age est '.$diff->format('%y');
+
+//                   Gestion de l'age 2 ------------------------------------------
+//               Option de SQL assez simple pour récupérer l'age d'une personne en jour par la suite on divise par 365 et le tour est joué :
+
+// Exemple avec une table enfant qui a un champ date_naissance de format date dans une BD MySQL
+
+
+//     $enfant = "select *, DATEDIFF(CURDATE(),date_naissance)  as nb_jour
+//                                 from enfant   ";
+   
+//     $rb = mysql_query($enfant) or die ("<B>enfant = $enfant</b>".mysql_error());
+       
+//     while($List2 = mysql_fetch_array($rb))
+//     {
+//     extract($List2);
+   
+//     $age = floor($nb_jour / 365);
+//  print "age = $age<br/>\n";
+// }
+
+
+                  //verifie que les données ne sont pas vident
+
+                if(isset($_POST['nom'] ,$_POST['mail'] ,$_POST['birth_date'] ,$_POST['mdp'] , $_POST['genre'] , $_POST['region'])) {
+        echo 'les variables existent' . '<br>';
+        if(!empty($_POST['nom'] && $_POST['prenom'] && $_POST['mail'] && $_POST['birth_date'] && $_POST['mdp'] && $_POST['genre'] &&  $_POST['region'])) {
+            echo ' les champs ont été remplis' . '<br>';
+            }
+          }
+        else {
+          echo ' inscription non effectué' . '<br>';
+          }
+
+
  
 
 ?>

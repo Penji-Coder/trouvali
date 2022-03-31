@@ -13,7 +13,10 @@
         die('Erreur : '.$e->getMessage());
     }
  
-
+    $requetesql =  'SELECT * FROM  rencontre';
+    $profilStatement = $db->prepare($requetesql);
+    $profilStatement->execute(); 
+    $profils =  $profilStatement->fetchAll();
 
   ?>
 
